@@ -151,6 +151,26 @@ class ventas_servicio extends fbase_controller
             'servicios_mostrar_reparacion' => 0,
             'servicios_esp_reparacion' => 0,
             'servicios_mostrar_esp_reparacion' => 0,
+            'servicios_operadortel' => 0,
+            'servicios_mostrar_operadortel' => 0,
+            'servicios_lcd' => 0,
+            'servicios_mostrar_lcd' => 0,
+            'servicios_tipotouch' => 0,
+            'servicios_mostrar_tipotouch' => 0,
+            'servicios_tapa' => 0,
+            'servicios_mostrar_tapa' => 0,
+            'servicios_marco' => 0,
+            'servicios_mostrar_marco' => 0,
+            'servicios_tipoboton' => 0,
+            'servicios_mostrar_tipoboton' => 0,
+            'servicios_bateria' => 0,
+            'servicios_mostrar_bateria' => 0,
+            'servicios_lentecamara' => 0,
+            'servicios_mostrar_lentecamara' => 0,
+            'servicios_tornillos' => 0,
+            'servicios_mostrar_tornillos' => 0,
+            'servicios_status' => 0,
+            'servicios_mostrar_status' => 0,
             'servicios_accesorios' => 0,
             'servicios_mostrar_accesorios' => 0,
             'servicios_descripcion' => 0,
@@ -179,6 +199,16 @@ class ventas_servicio extends fbase_controller
             'servicios_condequipo_linea' => 0,
             'servicios_reparacion_linea' => 0,
             'servicios_esp_reparacion_linea' => 0,
+            'servicios_operadortel_linea' => 0,
+            'servicios_lcd_linea' => 0,
+            'servicios_tipotouch_linea' => 0,
+            'servicios_tapa_linea' => 0,
+            'servicios_marco_linea' => 0,
+            'servicios_tipoboton_linea' => 0,
+            'servicios_bateria_linea' => 0,
+            'servicios_lentecamara_linea' => 0,
+            'servicios_tornillos_linea' => 0,
+            'servicios_status_linea' => 0,
             'servicios_accesorios_linea' => 0,
             'servicios_descripcion_linea' => 0,
             'servicios_solucion_linea' => 0,
@@ -187,17 +217,27 @@ class ventas_servicio extends fbase_controller
             'servicios_garantia_linea' => 0,
             'st_servicio' => "Servicio",
             'st_servicios' => "Servicios",
-            'st_material' => "Defecto Reportado",
-            'st_material_estado' => "Diagnostico del tecnico",
+            'st_material' => "Defecto Reportado por Usuario",
+            'st_material_estado' => "Diagnostico Rapido",
             'st_tipomarca' => "Marca",
             'st_nummodelo' => "Modelo",
             'st_tipocolor' => "Color",
-            'st_imei1' => "IMEI 1",
-            'st_imei2' => "IMEI 2",
+            'st_imei1' => "ESN / IMEI 1",
+            'st_imei2' => "ESN / IMEI 2",
             'st_equipo' => "Tipo de Equipo",
             'st_condequipo' => "Condicion de Equipo",
             'st_reparacion' => "Tipo de Reparacion",
             'st_esp_reparacion' => "Especificacion de Reparacion",
+            'st_operadortel' => "Operador Telefonico",
+            'st_lcd' => "Display / LCD",
+            'st_tipotouch' => "Touch",
+            'st_tapa' => "Tapa",
+            'st_marco' => "Marco/Bisel",
+            'st_tipoboton' => "Botones",
+            'st_bateria' => "Bateria",
+            'st_lentecamara' => "Lente Camara",
+            'st_tornillos' => "Tornillos",
+            'st_status' => "Status",
             'st_accesorios' => "Accesorios que entrega",
             'st_descripcion' => "Descripción de la averia",
             'st_solucion' => "Solución",
@@ -273,6 +313,36 @@ class ventas_servicio extends fbase_controller
 
         if (isset($_POST['esp_reparacion'])) {
             $this->servicio->esp_reparacion = $_POST['esp_reparacion'];
+        }
+        if (isset($_POST['operadortel'])) {
+            $this->servicio->operadortel = $_POST['operadortel'];
+        }
+        if (isset($_POST['lcd'])) {
+            $this->servicio->lcd = $_POST['lcd'];
+        }
+        if (isset($_POST['tipotouch'])) {
+            $this->servicio->tipotouch = $_POST['tipotouch'];
+        }
+        if (isset($_POST['tapa'])) {
+            $this->servicio->tapa = $_POST['tapa'];
+        }
+        if (isset($_POST['marco'])) {
+            $this->servicio->marco = $_POST['marco'];
+        }
+        if (isset($_POST['tipoboton'])) {
+            $this->servicio->tipoboton = $_POST['tipoboton'];
+        }
+        if (isset($_POST['bateria'])) {
+            $this->servicio->bateria = $_POST['bateria'];
+        }
+        if (isset($_POST['lentecamara'])) {
+            $this->servicio->lentecamara = $_POST['lentecamara'];
+        }
+        if (isset($_POST['tornillos'])) {
+            $this->servicio->tornillos = $_POST['tornillos'];
+        }
+        if (isset($_POST['status'])) {
+            $this->servicio->status = $_POST['status'];
         }
 
         if (isset($_POST['accesorios'])) {
@@ -670,6 +740,36 @@ class ventas_servicio extends fbase_controller
                      if ($this->setup['servicios_esp_reparacion_linea']) {
                         $n->descripcion .= $this->setup['st_esp_reparacion'] . ": \n" . $this->servicio->esp_reparacion . "\n\n";
                     }
+                    if ($this->setup['servicios_operadortel_linea']) {
+                        $n->descripcion .= $this->setup['st_operadortel'] . ": \n" . $this->servicio->operadortel . "\n\n";
+                    }
+                     if ($this->setup['servicios_lcd_linea']) {
+                        $n->descripcion .= $this->setup['st_lcd'] . ": \n" . $this->servicio->lcd . "\n\n";
+                    }
+                     if ($this->setup['servicios_tipotouch_linea']) {
+                        $n->descripcion .= $this->setup['st_tipotouch'] . ": \n" . $this->servicio->tipotouch . "\n\n";
+                    }
+                     if ($this->setup['servicios_tapa_linea']) {
+                        $n->descripcion .= $this->setup['st_tapa'] . ": \n" . $this->servicio->tapa . "\n\n";
+                    }
+                     if ($this->setup['servicios_marco_linea']) {
+                        $n->descripcion .= $this->setup['st_marco'] . ": \n" . $this->servicio->marco . "\n\n";
+                    }
+                     if ($this->setup['servicios_tipoboton_linea']) {
+                        $n->descripcion .= $this->setup['st_tipoboton'] . ": \n" . $this->servicio->tipoboton . "\n\n";
+                    }
+                     if ($this->setup['servicios_bateria_linea']) {
+                        $n->descripcion .= $this->setup['st_bateria'] . ": \n" . $this->servicio->bateria . "\n\n";
+                    }
+                     if ($this->setup['servicios_lentecamara_linea']) {
+                        $n->descripcion .= $this->setup['st_lentecamara'] . ": \n" . $this->servicio->lentecamara . "\n\n";
+                    }
+                     if ($this->setup['servicios_tornillos_linea']) {
+                        $n->descripcion .= $this->setup['st_tornillos'] . ": \n" . $this->servicio->tornillos . "\n\n";
+                    }
+                     if ($this->setup['servicios_status_linea']) {
+                        $n->descripcion .= $this->setup['st_status'] . ": \n" . $this->servicio->status . "\n\n";
+                    }
                     if ($this->setup['servicios_accesorios_linea']) {
                         $n->descripcion .= $this->setup['st_accesorios'] . ": \n" . $this->servicio->accesorios . "\n\n";
                     }
@@ -766,6 +866,36 @@ class ventas_servicio extends fbase_controller
                     }
                     if ($this->setup['servicios_esp_reparacion_linea']) {
                         $ns->descripcion .= $this->setup['st_esp_reparacion'] . ": " . $this->servicio->esp_reparacion . "\n";
+                    }
+                    if ($this->setup['servicios_operadortel_linea']) {
+                        $n->descripcion .= $this->setup['st_operadortel'] . ": " . $this->servicio->operadortel . "\n";
+                    }
+                     if ($this->setup['servicios_lcd_linea']) {
+                        $n->descripcion .= $this->setup['st_lcd'] . ": " . $this->servicio->lcd . "\n";
+                    }
+                     if ($this->setup['servicios_tipotouch_linea']) {
+                        $n->descripcion .= $this->setup['st_tipotouch'] . ": " . $this->servicio->tipotouch . "\n";
+                    }
+                     if ($this->setup['servicios_tapa_linea']) {
+                        $n->descripcion .= $this->setup['st_tapa'] . ": " . $this->servicio->tapa . "\n";
+                    }
+                     if ($this->setup['servicios_marco_linea']) {
+                        $n->descripcion .= $this->setup['st_marco'] . ": " . $this->servicio->marco . "\n";
+                    }
+                     if ($this->setup['servicios_tipoboton_linea']) {
+                        $n->descripcion .= $this->setup['st_tipoboton'] . ": " . $this->servicio->tipoboton . "\n";
+                    }
+                     if ($this->setup['servicios_bateria_linea']) {
+                        $n->descripcion .= $this->setup['st_bateria'] . ": " . $this->servicio->bateria . "\n";
+                    }
+                     if ($this->setup['servicios_lentecamara_linea']) {
+                        $n->descripcion .= $this->setup['st_lentecamara'] . ": " . $this->servicio->lentecamara . "\n";
+                    }
+                     if ($this->setup['servicios_tornillos_linea']) {
+                        $n->descripcion .= $this->setup['st_tornillos'] . ": " . $this->servicio->tornillos . "\n";
+                    }
+                     if ($this->setup['servicios_status_linea']) {
+                        $n->descripcion .= $this->setup['st_status'] . ": " . $this->servicio->status . "\n";
                     }
                     if ($this->setup['servicios_accesorios_linea']) {
                         $ns->descripcion .= $this->setup['st_accesorios'] . ": " . $this->servicio->accesorios . "\n";

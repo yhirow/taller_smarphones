@@ -332,7 +332,7 @@
          <div class="container-fluid" style="margin-top: 10px;">   
             <div class="row">
                {if="$fsc->setup['servicios_mostrar_material']"}
-               <div class="col-sm-4">
+               <div class="col-sm-6">
                   <div class="form-group{if="$fsc->setup['servicios_material']"} has-error{/if}">
                      {$fsc->setup['st_material']}
                      <textarea class="form-control" name="material" rows="2" {if="$fsc->setup['servicios_material']"} required=""{/if}{if="!$fsc->servicio->editable()"} readonly=""{/if}>{$fsc->servicio->material}</textarea>
@@ -340,18 +340,21 @@
                </div>
                {/if}               
                {if="$fsc->setup['servicios_mostrar_material_estado']"}
-               <div class="col-sm-4">
+               <div class="col-sm-6">
                   <div class="form-group{if="$fsc->setup['servicios_material_estado']"} has-error{/if}">
                      {$fsc->setup['st_material_estado']}
                      <textarea class="form-control" name="material_estado" rows="2" {if="$fsc->setup['servicios_material_estado']"} required=""{/if}{if="!$fsc->servicio->editable()"} readonly=""{/if}>{$fsc->servicio->material_estado}</textarea>
                   </div>
                </div>
                {/if}
+               <div class="col-sm-12">
+        <div class="page-header">
+</div></div>
                {if="$fsc->setup['servicios_mostrar_tipomarca']"}
                <div class="col-sm-4">
                   <div class="form-group{if="$fsc->setup['servicios_tipomarca']"} has-error{/if}">
                      {$fsc->setup['st_tipomarca']}
-                     <textarea class="form-control" name="tipomarca" rows="2" {if="$fsc->setup['servicios_tipomarca']"} required=""{/if}{if="!$fsc->servicio->editable()"} readonly=""{/if}>{$fsc->servicio->tipomarca}</textarea>
+                     <textarea class="form-control" name="tipomarca" rows="1" {if="$fsc->setup['servicios_tipomarca']"} required=""{/if}{if="!$fsc->servicio->editable()"} readonly=""{/if}>{$fsc->servicio->tipomarca}</textarea>
                   </div>
                </div>
                {/if}
@@ -359,7 +362,7 @@
                <div class="col-sm-4">
                   <div class="form-group{if="$fsc->setup['servicios_nummodelo']"} has-error{/if}">
                      {$fsc->setup['st_nummodelo']}
-                     <textarea class="form-control" name="nummodelo" rows="2" {if="$fsc->setup['servicios_nummodelo']"} required=""{/if}{if="!$fsc->servicio->editable()"} readonly=""{/if}>{$fsc->servicio->nummodelo}</textarea>
+                     <textarea class="form-control" name="nummodelo" rows="1" {if="$fsc->setup['servicios_nummodelo']"} required=""{/if}{if="!$fsc->servicio->editable()"} readonly=""{/if}>{$fsc->servicio->nummodelo}</textarea>
                   </div>
                </div>
                {/if}
@@ -367,7 +370,7 @@
                <div class="col-sm-4">
                   <div class="form-group{if="$fsc->setup['servicios_tipocolor']"} has-error{/if}">
                      {$fsc->setup['st_tipocolor']}
-                     <textarea class="form-control" name="tipocolor" rows="2" {if="$fsc->setup['servicios_tipocolor']"} required=""{/if}{if="!$fsc->servicio->editable()"} readonly=""{/if}>{$fsc->servicio->tipocolor}</textarea>
+                     <textarea class="form-control" name="tipocolor" rows="1" {if="$fsc->setup['servicios_tipocolor']"} required=""{/if}{if="!$fsc->servicio->editable()"} readonly=""{/if}>{$fsc->servicio->tipocolor}</textarea>
                   </div>
                </div>
                {/if}
@@ -375,7 +378,7 @@
                <div class="col-sm-4">
                   <div class="form-group{if="$fsc->setup['servicios_imei1']"} has-error{/if}">
                      {$fsc->setup['st_imei1']}
-                     <textarea class="form-control" name="imei1" rows="2" {if="$fsc->setup['servicios_imei1']"} required=""{/if}{if="!$fsc->servicio->editable()"} readonly=""{/if}>{$fsc->servicio->imei1}</textarea>
+                     <textarea class="form-control" name="imei1" rows="1" {if="$fsc->setup['servicios_imei1']"} required=""{/if}{if="!$fsc->servicio->editable()"} readonly=""{/if}>{$fsc->servicio->imei1}</textarea>
                   </div>
                </div>
                {/if}
@@ -383,7 +386,7 @@
                <div class="col-sm-4">
                   <div class="form-group{if="$fsc->setup['servicios_imei2']"} has-error{/if}">
                      {$fsc->setup['st_imei2']}
-                     <textarea class="form-control" name="imei2" rows="2" {if="$fsc->setup['servicios_imei2']"} required=""{/if}{if="!$fsc->servicio->editable()"} readonly=""{/if}>{$fsc->servicio->imei2}</textarea>
+                     <textarea class="form-control" name="imei2" rows="1" {if="$fsc->setup['servicios_imei2']"} required=""{/if}{if="!$fsc->servicio->editable()"} readonly=""{/if}>{$fsc->servicio->imei2}</textarea>
                   </div>
                </div>
                {/if}
@@ -391,7 +394,7 @@
                <div class="col-sm-4">
                   <div class="form-group{if="$fsc->setup['servicios_equipo']"} has-error{/if}">
                      {$fsc->setup['st_equipo']}
-                     <textarea class="form-control" name="equipo" rows="2" {if="$fsc->setup['servicios_equipo']"} required=""{/if}{if="!$fsc->servicio->editable()"} readonly=""{/if}>{$fsc->servicio->equipo}</textarea>
+                     <textarea class="form-control" name="equipo" rows="1" {if="$fsc->setup['servicios_equipo']"} required=""{/if}{if="!$fsc->servicio->editable()"} readonly=""{/if}>{$fsc->servicio->equipo}</textarea>
                   </div>
                </div>
                {/if}
@@ -418,6 +421,91 @@
                      <textarea class="form-control" name="esp_reparacion" rows="2" {if="$fsc->setup['servicios_esp_reparacion']"} required=""{/if}{if="!$fsc->servicio->editable()"} readonly=""{/if}>{$fsc->servicio->esp_reparacion}</textarea>
                   </div>
                </div>
+               {/if}
+
+               <div class="col-sm-12">
+        <div class="page-header">
+  <h3>ESTADO FISICO DEL EQUIPO <small> Entregado por Cliente</small></h3>
+</div></div>
+               {if="$fsc->setup['servicios_mostrar_operadortel']"}
+               <div class="col-sm-4">
+                  <div class="form-group{if="$fsc->setup['servicios_operadortel']"} has-error{/if}">
+                     {$fsc->setup['st_operadortel']}
+                     <textarea class="form-control" name="operadortel" rows="1" {if="$fsc->setup['servicios_operadortel']"} required=""{/if}{if="!$fsc->servicio->editable()"} readonly=""{/if}>{$fsc->servicio->operadortel}</textarea>
+                  </div>
+               </div>
+               {/if}
+               {if="$fsc->setup['servicios_mostrar_lcd']"}
+               <div class="col-sm-4">
+                  <div class="form-group{if="$fsc->setup['servicios_lcd']"} has-error{/if}">
+                     {$fsc->setup['st_lcd']}
+                     <textarea class="form-control" name="lcd" rows="1" {if="$fsc->setup['servicios_lcd']"} required=""{/if}{if="!$fsc->servicio->editable()"} readonly=""{/if}>{$fsc->servicio->lcd}</textarea>
+                  </div>
+               </div>
+               {/if}
+               {if="$fsc->setup['servicios_mostrar_tipotouch']"}
+               <div class="col-sm-4">
+                  <div class="form-group{if="$fsc->setup['servicios_tipotouch']"} has-error{/if}">
+                     {$fsc->setup['st_tipotouch']}
+                     <textarea class="form-control" name="tipotouch" rows="1" {if="$fsc->setup['servicios_tipotouch']"} required=""{/if}{if="!$fsc->servicio->editable()"} readonly=""{/if}>{$fsc->servicio->tipotouch}</textarea>
+                  </div>
+               </div>
+               {/if}
+               {if="$fsc->setup['servicios_mostrar_tapa']"}
+               <div class="col-sm-4">
+                  <div class="form-group{if="$fsc->setup['servicios_tapa']"} has-error{/if}">
+                     {$fsc->setup['st_tapa']}
+                     <textarea class="form-control" name="tapa" rows="1" {if="$fsc->setup['servicios_tapa']"} required=""{/if}{if="!$fsc->servicio->editable()"} readonly=""{/if}>{$fsc->servicio->tapa}</textarea>
+                  </div>
+               </div>
+               {/if}
+               {if="$fsc->setup['servicios_mostrar_marco']"}
+               <div class="col-sm-4">
+                  <div class="form-group{if="$fsc->setup['servicios_marco']"} has-error{/if}">
+                     {$fsc->setup['st_marco']}
+                     <textarea class="form-control" name="marco" rows="1" {if="$fsc->setup['servicios_marco']"} required=""{/if}{if="!$fsc->servicio->editable()"} readonly=""{/if}>{$fsc->servicio->marco}</textarea>
+                  </div>
+               </div>
+               {/if}
+               {if="$fsc->setup['servicios_mostrar_tipoboton']"}
+               <div class="col-sm-4">
+                  <div class="form-group{if="$fsc->setup['servicios_tipoboton']"} has-error{/if}">
+                     {$fsc->setup['st_tipoboton']}
+                     <textarea class="form-control" name="tipoboton" rows="1" {if="$fsc->setup['servicios_tipoboton']"} required=""{/if}{if="!$fsc->servicio->editable()"} readonly=""{/if}>{$fsc->servicio->tipoboton}</textarea>
+                  </div>
+               </div>
+               {/if}
+               {if="$fsc->setup['servicios_mostrar_bateria']"}
+               <div class="col-sm-4">
+                  <div class="form-group{if="$fsc->setup['servicios_bateria']"} has-error{/if}">
+                     {$fsc->setup['st_bateria']}
+                     <textarea class="form-control" name="bateria" rows="1" {if="$fsc->setup['servicios_bateria']"} required=""{/if}{if="!$fsc->servicio->editable()"} readonly=""{/if}>{$fsc->servicio->bateria}</textarea>
+                  </div>
+               </div>
+               {if="$fsc->setup['servicios_mostrar_lentecamara']"}
+               <div class="col-sm-4">
+                  <div class="form-group{if="$fsc->setup['servicios_lentecamara']"} has-error{/if}">
+                     {$fsc->setup['st_lentecamara']}
+                     <textarea class="form-control" name="lentecamara" rows="1" {if="$fsc->setup['servicios_lentecamara']"} required=""{/if}{if="!$fsc->servicio->editable()"} readonly=""{/if}>{$fsc->servicio->lentecamara}</textarea>
+                  </div>
+               </div>
+               {/if}
+               {if="$fsc->setup['servicios_mostrar_tornillos']"}
+               <div class="col-sm-4">
+                  <div class="form-group{if="$fsc->setup['servicios_tornillos']"} has-error{/if}">
+                     {$fsc->setup['st_tornillos']}
+                     <textarea class="form-control" name="tornillos" rows="1" {if="$fsc->setup['servicios_tornillos']"} required=""{/if}{if="!$fsc->servicio->editable()"} readonly=""{/if}>{$fsc->servicio->tornillos}</textarea>
+                  </div>
+               </div>
+               {/if}
+               {if="$fsc->setup['servicios_mostrar_status']"}
+               <div class="col-sm-4">
+                  <div class="form-group{if="$fsc->setup['servicios_status']"} has-error{/if}">
+                     {$fsc->setup['st_status']}
+                     <textarea class="form-control" name="status" rows="1" {if="$fsc->setup['servicios_status']"} required=""{/if}{if="!$fsc->servicio->editable()"} readonly=""{/if}>{$fsc->servicio->status}</textarea>
+                  </div>
+               </div>
+               {/if}
                {/if}
                {if="$fsc->setup['servicios_mostrar_accesorios']"}
                <div class="col-sm-4">

@@ -67,6 +67,26 @@ class imprimir_servicio_ticket extends fs_controller
             'servicios_mostrar_reparacion' => 0,
             'servicios_esp_reparacion' => 0,
             'servicios_mostrar_esp_reparacion' => 0,
+            'servicios_operadortel' => 0,
+            'servicios_mostrar_operadortel' => 0,
+            'servicios_lcd' => 0,
+            'servicios_mostrar_lcd' => 0,
+            'servicios_tipotouch' => 0,
+            'servicios_mostrar_tipotouch' => 0,
+            'servicios_tapa' => 0,
+            'servicios_mostrar_tapa' => 0,
+            'servicios_marco' => 0,
+            'servicios_mostrar_marco' => 0,
+            'servicios_tipoboton' => 0,
+            'servicios_mostrar_tipoboton' => 0,
+            'servicios_bateria' => 0,
+            'servicios_mostrar_bateria' => 0,
+            'servicios_lentecamara' => 0,
+            'servicios_mostrar_lentecamara' => 0,
+            'servicios_tornillos' => 0,
+            'servicios_mostrar_tornillos' => 0,
+            'servicios_status' => 0,
+            'servicios_mostrar_status' => 0,
             'servicios_accesorios' => 0,
             'servicios_mostrar_accesorios' => 0,
             'servicios_descripcion' => 0,
@@ -87,17 +107,27 @@ class imprimir_servicio_ticket extends fs_controller
             " caso de disconformidad con el técnico.",
             'st_servicio' => "Servicio",
             'st_servicios' => "Servicios",
-            'st_material' => "Defecto Reportado",
-            'st_material_estado' => "Diagnostico del tecnico",
+            'st_material' => "Defecto Reportado por Usuario",
+            'st_material_estado' => "Diagnostico Rapido",
             'st_tipomarca' => "Marca",
             'st_nummodelo' => "Modelo",
             'st_tipocolor' => "Color",
-            'st_imei1' => "IMEI 1",
-            'st_imei2' => "IMEI 2",
+            'st_imei1' => "ESN / IMEI 1",
+            'st_imei2' => "ESN / IMEI 2",
             'st_equipo' => "Tipo de Equipo",
             'st_condequipo' => "Condicion de Equipo",
             'st_reparacion' => "Tipo de Reparacion",
             'st_esp_reparacion' => "Especificacion de Reparacion",
+            'st_operadortel' => "Operador Telefonico",
+            'st_lcd' => "Display / LCD",
+            'st_tipotouch' => "Touch",
+            'st_tapa' => "Tapa",
+            'st_marco' => "Marco/Bisel",
+            'st_tipoboton' => "Botones",
+            'st_bateria' => "Bateria",
+            'st_lentecamara' => "Lente Camara",
+            'st_tornillos' => "Tornillos",
+            'st_status' => "Encendido",
             'st_accesorios' => "Accesorios que entrega",
             'st_descripcion' => "Descripción de la averia",
             'st_solucion' => "Solución",
@@ -228,6 +258,36 @@ class imprimir_servicio_ticket extends fs_controller
 
         if ($this->servicio->esp_reparacion) {
             $this->terminal->add_linea($this->setup['st_esp_reparacion'] . ": " . $this->servicio->esp_reparacion . "\n\n");
+        }
+        if ($this->servicio->operadortel) {
+            $this->terminal->add_linea($this->setup['st_operadortel'] . ": " . $this->servicio->operadortel . "\n\n");
+        }
+        if ($this->servicio->lcd) {
+            $this->terminal->add_linea($this->setup['st_lcd'] . ": " . $this->servicio->lcd . "\n\n");
+        }
+        if ($this->servicio->tipotouch) {
+            $this->terminal->add_linea($this->setup['st_tipotouch'] . ": " . $this->servicio->tipotouch . "\n\n");
+        }
+        if ($this->servicio->tapa) {
+            $this->terminal->add_linea($this->setup['st_tapa'] . ": " . $this->servicio->tapa . "\n\n");
+        }
+        if ($this->servicio->marco) {
+            $this->terminal->add_linea($this->setup['st_marco'] . ": " . $this->servicio->marco . "\n\n");
+        }
+        if ($this->servicio->tipoboton) {
+            $this->terminal->add_linea($this->setup['st_tipoboton'] . ": " . $this->servicio->tipoboton . "\n\n");
+        }
+        if ($this->servicio->bateria) {
+            $this->terminal->add_linea($this->setup['st_bateria'] . ": " . $this->servicio->bateria . "\n\n");
+        }
+        if ($this->servicio->lentecamara) {
+            $this->terminal->add_linea($this->setup['st_lentecamara'] . ": " . $this->servicio->lentecamara . "\n\n");
+        }
+        if ($this->servicio->tornillos) {
+            $this->terminal->add_linea($this->setup['st_tornillos'] . ": " . $this->servicio->tornillos . "\n\n");
+        }
+        if ($this->servicio->status) {
+            $this->terminal->add_linea($this->setup['st_status'] . ": " . $this->servicio->status . "\n\n");
         }
 
         if ($this->servicio->accesorios) {

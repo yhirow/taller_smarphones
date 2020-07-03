@@ -203,6 +203,16 @@ class servicio_cliente extends fs_model
     public $condequipo;
     public $reparacion;
     public $esp_reparacion;
+    public $operadortel;
+    public $lcd;
+    public $tipotouch;
+    public $tapa;
+    public $marco;
+    public $tipoboton;
+    public $bateria;
+    public $lentecamara;
+    public $tornillos;
+    public $status;
     public $accesorios;
 
     /**
@@ -289,6 +299,16 @@ class servicio_cliente extends fs_model
             $this->condequipo = $data['condequipo'];
             $this->reparacion = $data['reparacion'];
             $this->esp_reparacion = $data['esp_reparacion'];
+            $this->operadortel = $data['operadortel'];
+            $this->lcd = $data['lcd'];
+            $this->tipotouch = $data['tipotouch'];
+            $this->tapa = $data['tapa'];
+            $this->marco = $data['marco'];
+            $this->tipoboton = $data['tipoboton'];
+            $this->bateria = $data['bateria'];
+            $this->lentecamara = $data['lentecamara'];
+            $this->tornillos = $data['tornillos'];
+            $this->status = $data['status'];
             $this->accesorios = $data['accesorios'];
             $this->idestado = $data['idestado'];
 
@@ -360,6 +380,16 @@ class servicio_cliente extends fs_model
             $this->condequipo = NULL;
             $this->reparacion = NULL;
             $this->esp_reparacion = NULL;
+            $this->operadortel = NULL;
+            $this->lcd = NULL;
+            $this->tipotouch = NULL;
+            $this->tapa = NULL;
+            $this->marco = NULL;
+            $this->tipoboton = NULL;
+            $this->bateria = NULL;
+            $this->lentecamara = NULL;
+            $this->tornillos = NULL;
+            $this->status = NULL;
             $this->accesorios = NULL;
             $this->idestado = NULL;
             $this->prioridad = 3;
@@ -602,6 +632,16 @@ class servicio_cliente extends fs_model
                     . ", condequipo = " . $this->var2str($this->condequipo)
                     . ", reparacion = " . $this->var2str($this->reparacion)
                     . ", esp_reparacion = " . $this->var2str($this->esp_reparacion)
+                    . ", operadortel = " . $this->var2str($this->operadortel)
+                    . ", lcd = " . $this->var2str($this->lcd)
+                    . ", tipotouch = " . $this->var2str($this->tipotouch)
+                    . ", tapa = " . $this->var2str($this->tapa)
+                    . ", marco = " . $this->var2str($this->marco)
+                    . ", tipoboton = " . $this->var2str($this->tipoboton)
+                    . ", bateria = " . $this->var2str($this->bateria)
+                    . ", lentecamara = " . $this->var2str($this->lentecamara)
+                    . ", tornillos = " . $this->var2str($this->tornillos)
+                    . ", status = " . $this->var2str($this->status)
                     . ", accesorios = " . $this->var2str($this->accesorios)
                     . ", idestado = " . $this->var2str($this->idestado)
                     . ", garantia = " . $this->var2str($this->garantia)
@@ -624,7 +664,7 @@ class servicio_cliente extends fs_model
                direccion,fecha,hora,idalbaran,irpf,neto,nombrecliente,numero,observaciones,
                porcomision,fechafin,fechainicio,garantia,provincia,recfinanciero,tasaconv,
                total,totaleuros,totalirpf,totaliva,totalrecargo,descripcion,solucion,material,
-               material_estado,tipomarca,nummodelo,tipocolor,imei1,imei2,equipo,condequipo,reparacion,esp_reparacion,accesorios,prioridad,numero2,idestado,editable,horainicio,horafin,femail,numdocs)
+               material_estado,tipomarca,nummodelo,tipocolor,imei1,imei2,equipo,condequipo,reparacion,esp_reparacion,operadortel,lcd,tipotouch,tapa,marco,tipoboton,bateria,lentecamara,tornillos,status,accesorios,prioridad,numero2,idestado,editable,horainicio,horafin,femail,numdocs)
                 VALUES (" . $this->var2str($this->apartado)
                 . "," . $this->var2str($this->cifnif)
                 . "," . $this->var2str($this->ciudad)
@@ -673,6 +713,16 @@ class servicio_cliente extends fs_model
                 . "," . $this->var2str($this->condequipo)
                 . "," . $this->var2str($this->reparacion)
                 . "," . $this->var2str($this->esp_reparacion)
+                . "," . $this->var2str($this->operadortel)
+                . "," . $this->var2str($this->lcd)
+                . "," . $this->var2str($this->tipotouch)
+                . "," . $this->var2str($this->tapa)
+                . "," . $this->var2str($this->marco)
+                . "," . $this->var2str($this->tipoboton)
+                . "," . $this->var2str($this->bateria)
+                . "," . $this->var2str($this->lentecamara)
+                . "," . $this->var2str($this->tornillos)
+                . "," . $this->var2str($this->status)
                 . "," . $this->var2str($this->accesorios)
                 . "," . $this->var2str($this->prioridad)
                 . "," . $this->var2str($this->numero2)

@@ -156,18 +156,18 @@
                </div>
                <div class="col-sm-4">
                   <div class="panel panel-default">
-                     <div class="panel-heading text-center">Defecto Reportado</div>
+                     <div class="panel-heading text-center">Defecto Reportado por Cliente</div>
                      <div class="panel-body">
                         <div class="checkbox">
                            <label>
                               <input id="material" onclick="check(this.id)" type="checkbox" name="servicios_mostrar_material" value="TRUE"{if="$fsc->servicios_setup['servicios_mostrar_material']"} checked=""{/if}/>
-                              Mostrar Text Area Defecto Reportado
+                              Mostrar Text Area Defecto Reportado por Cliente
                            </label>
                         </div>
                         <div class="checkbox">
                            <label>
                               <input id="checked_material" type="checkbox" name="servicios_material" value="TRUE"{if="$fsc->servicios_setup['servicios_material']"} checked=""{/if}{if="!$fsc->servicios_setup['servicios_mostrar_material']"} disabled=""{/if}/>
-                              Defecto Reportado requereido
+                              Defecto Reportado por Usuario requereido
                            </label>
                         </div> 
                      </div> 
@@ -175,18 +175,18 @@
                </div>               
                <div class="col-sm-4">
                   <div class="panel panel-default">
-                     <div class="panel-heading text-center">Diagnostico del tecnico</div>
+                     <div class="panel-heading text-center">Diagnostico Rapido</div>
                      <div class="panel-body">
                         <div class="checkbox">
                            <label>
                               <input id="matestado" onclick="check(this.id)" type="checkbox" name="servicios_mostrar_material_estado" value="TRUE"{if="$fsc->servicios_setup['servicios_mostrar_material_estado']"} checked=""{/if}/>
-                              Mostrar Text Area Diagnostico del tecnico
+                              Mostrar Text Area Diagnostico Rapido
                            </label>
                         </div>
                         <div class="checkbox">
                            <label>
                               <input id="checked_matestado" type="checkbox" name="servicios_material_estado" value="TRUE"{if="$fsc->servicios_setup['servicios_material_estado']"} checked=""{/if} {if="!$fsc->servicios_setup['servicios_mostrar_material_estado']"} disabled=""{/if}/>
-                              Diagnostico del tecnico requerido
+                              Diagnostico Rapido requerido
                            </label>
                         </div> 
                      </div>
@@ -251,18 +251,18 @@
                </div>
                <div class="col-sm-4">
                   <div class="panel panel-default">
-                     <div class="panel-heading text-center">IMEI 1</div>
+                     <div class="panel-heading text-center">ESN / IMEI 1</div>
                      <div class="panel-body">
                         <div class="checkbox">
                            <label>
                               <input id="imei1" onclick="check(this.id)" type="checkbox" name="servicios_mostrar_imei1" value="TRUE"{if="$fsc->servicios_setup['servicios_mostrar_imei1']"} checked=""{/if}/>
-                              Mostrar Text Area IMEI 1
+                              Mostrar Text Area ESN / IMEI 1
                            </label>
                         </div>
                         <div class="checkbox">
                            <label>
                               <input id="checked_imei1" type="checkbox" name="servicios_imei1" value="TRUE"{if="$fsc->servicios_setup['servicios_imei1']"} checked=""{/if}{if="!$fsc->servicios_setup['servicios_mostrar_imei1']"} disabled=""{/if}/>
-                              IMEI 1 requereido
+                              ESN / IMEI 1 requereido
                            </label>
                         </div> 
                      </div> 
@@ -270,18 +270,18 @@
                </div>
                <div class="col-sm-4">
                   <div class="panel panel-default">
-                     <div class="panel-heading text-center">IMEI 2</div>
+                     <div class="panel-heading text-center">ESN / IMEI 2</div>
                      <div class="panel-body">
                         <div class="checkbox">
                            <label>
                               <input id="imei2" onclick="check(this.id)" type="checkbox" name="servicios_mostrar_imei2" value="TRUE"{if="$fsc->servicios_setup['servicios_mostrar_imei2']"} checked=""{/if}/>
-                              Mostrar Text Area IMEI 2
+                              Mostrar Text Area ESN / IMEI 2
                            </label>
                         </div>
                         <div class="checkbox">
                            <label>
                               <input id="checked_imei2" type="checkbox" name="servicios_imei2" value="TRUE"{if="$fsc->servicios_setup['servicios_imei2']"} checked=""{/if}{if="!$fsc->servicios_setup['servicios_mostrar_imei2']"} disabled=""{/if}/>
-                              IMEI 2 requereido
+                              ESN / IMEI 2 requereido
                            </label>
                         </div> 
                      </div> 
@@ -362,7 +362,197 @@
                         </div> 
                      </div> 
                   </div> 
-               </div>               
+               </div> 
+               <div class="col-sm-4">
+                  <div class="panel panel-default">
+                     <div class="panel-heading text-center">Operador Telefonico</div>
+                     <div class="panel-body">
+                        <div class="checkbox">
+                           <label>
+                              <input id="operadortel" onclick="check(this.id)" type="checkbox" name="servicios_mostrar_operadortel" value="TRUE"{if="$fsc->servicios_setup['servicios_mostrar_operadortel']"} checked=""{/if}/>
+                              Mostrar Text Area Operador Telefonico
+                           </label>
+                        </div>
+                        <div class="checkbox">
+                           <label>
+                              <input id="checked_operadortel" type="checkbox" name="servicios_operadortel" value="TRUE"{if="$fsc->servicios_setup['servicios_operadortel']"} checked=""{/if}{if="!$fsc->servicios_setup['servicios_mostrar_operadortel']"} disabled=""{/if}/>
+                              Operador Telefonico Requerido
+                           </label>
+                        </div> 
+                     </div> 
+                  </div> 
+               </div>    
+               <div class="col-sm-4">
+                  <div class="panel panel-default">
+                     <div class="panel-heading text-center">Display / LCD</div>
+                     <div class="panel-body">
+                        <div class="checkbox">
+                           <label>
+                              <input id="lcd" onclick="check(this.id)" type="checkbox" name="servicios_mostrar_lcd" value="TRUE"{if="$fsc->servicios_setup['servicios_mostrar_lcd']"} checked=""{/if}/>
+                              Mostrar Text Area Display / LCD
+                           </label>
+                        </div>
+                        <div class="checkbox">
+                           <label>
+                              <input id="checked_lcd" type="checkbox" name="servicios_lcd" value="TRUE"{if="$fsc->servicios_setup['servicios_lcd']"} checked=""{/if}{if="!$fsc->servicios_setup['servicios_mostrar_lcd']"} disabled=""{/if}/>
+                              Display / LCD requerido
+                           </label>
+                        </div> 
+                     </div> 
+                  </div>
+               </div> 
+               <div class="col-sm-4">
+                  <div class="panel panel-default">
+                     <div class="panel-heading text-center">Touch</div>
+                     <div class="panel-body">
+                        <div class="checkbox">
+                           <label>
+                              <input id="tipotouch" onclick="check(this.id)" type="checkbox" name="servicios_mostrar_tipotouch" value="TRUE"{if="$fsc->servicios_setup['servicios_mostrar_tipotouch']"} checked=""{/if}/>
+                              Mostrar Text Area Touch
+                           </label>
+                        </div>
+                        <div class="checkbox">
+                           <label>
+                              <input id="checked_tipotouch" type="checkbox" name="servicios_tipotouch" value="TRUE"{if="$fsc->servicios_setup['servicios_tipotouch']"} checked=""{/if}{if="!$fsc->servicios_setup['servicios_mostrar_tipotouch']"} disabled=""{/if}/>
+                              Touch requerido
+                           </label>
+                        </div> 
+                     </div> 
+                  </div>
+               </div> 
+               <div class="col-sm-4">
+                  <div class="panel panel-default">
+                     <div class="panel-heading text-center">Tapa</div>
+                     <div class="panel-body">
+                        <div class="checkbox">
+                           <label>
+                              <input id="tapa" onclick="check(this.id)" type="checkbox" name="servicios_mostrar_tapa" value="TRUE"{if="$fsc->servicios_setup['servicios_mostrar_tapa']"} checked=""{/if}/>
+                              Mostrar Text Area Tapa
+                           </label>
+                        </div>
+                        <div class="checkbox">
+                           <label>
+                              <input id="checked_tapa" type="checkbox" name="servicios_tapa" value="TRUE"{if="$fsc->servicios_setup['servicios_tapa']"} checked=""{/if}{if="!$fsc->servicios_setup['servicios_mostrar_tapa']"} disabled=""{/if}/>
+                              Tapa requerido
+                           </label>
+                        </div> 
+                     </div> 
+                  </div>
+               </div>
+               <div class="col-sm-4">
+                  <div class="panel panel-default">
+                     <div class="panel-heading text-center">Marco</div>
+                     <div class="panel-body">
+                        <div class="checkbox">
+                           <label>
+                              <input id="marco" onclick="check(this.id)" type="checkbox" name="servicios_mostrar_marco" value="TRUE"{if="$fsc->servicios_setup['servicios_mostrar_marco']"} checked=""{/if}/>
+                              Mostrar Text Area Marco
+                           </label>
+                        </div>
+                        <div class="checkbox">
+                           <label>
+                              <input id="checked_marco" type="checkbox" name="servicios_marco" value="TRUE"{if="$fsc->servicios_setup['servicios_marco']"} checked=""{/if}{if="!$fsc->servicios_setup['servicios_mostrar_marco']"} disabled=""{/if}/>
+                              Marco requerido
+                           </label>
+                        </div> 
+                     </div> 
+                  </div>
+               </div>
+               <div class="col-sm-4">
+                  <div class="panel panel-default">
+                     <div class="panel-heading text-center">Botones</div>
+                     <div class="panel-body">
+                        <div class="checkbox">
+                           <label>
+                              <input id="tipoboton" onclick="check(this.id)" type="checkbox" name="servicios_mostrar_tipoboton" value="TRUE"{if="$fsc->servicios_setup['servicios_mostrar_tipoboton']"} checked=""{/if}/>
+                              Mostrar Text Area Botones
+                           </label>
+                        </div>
+                        <div class="checkbox">
+                           <label>
+                              <input id="checked_tipoboton" type="checkbox" name="servicios_tipoboton" value="TRUE"{if="$fsc->servicios_setup['servicios_tipoboton']"} checked=""{/if}{if="!$fsc->servicios_setup['servicios_mostrar_tipoboton']"} disabled=""{/if}/>
+                              Botones requerido
+                           </label>
+                        </div> 
+                     </div> 
+                  </div>
+               </div>
+               <div class="col-sm-4">
+                  <div class="panel panel-default">
+                     <div class="panel-heading text-center">Batería</div>
+                     <div class="panel-body">
+                        <div class="checkbox">
+                           <label>
+                              <input id="bateria" onclick="check(this.id)" type="checkbox" name="servicios_mostrar_bateria" value="TRUE"{if="$fsc->servicios_setup['servicios_mostrar_bateria']"} checked=""{/if}/>
+                              Mostrar Text Area Batería
+                           </label>
+                        </div>
+                        <div class="checkbox">
+                           <label>
+                              <input id="checked_bateria" type="checkbox" name="servicios_bateria" value="TRUE"{if="$fsc->servicios_setup['servicios_bateria']"} checked=""{/if}{if="!$fsc->servicios_setup['servicios_mostrar_bateria']"} disabled=""{/if}/>
+                              Batería requerido
+                           </label>
+                        </div> 
+                     </div> 
+                  </div>
+               </div>
+               <div class="col-sm-4">
+                  <div class="panel panel-default">
+                     <div class="panel-heading text-center">Lente Cámara(s)</div>
+                     <div class="panel-body">
+                        <div class="checkbox">
+                           <label>
+                              <input id="lentecamara" onclick="check(this.id)" type="checkbox" name="servicios_mostrar_lentecamara" value="TRUE"{if="$fsc->servicios_setup['servicios_mostrar_lentecamara']"} checked=""{/if}/>
+                              Mostrar Text Area Lente Cámara(s)
+                           </label>
+                        </div>
+                        <div class="checkbox">
+                           <label>
+                              <input id="checked_lentecamara" type="checkbox" name="servicios_lentecamara" value="TRUE"{if="$fsc->servicios_setup['servicios_lentecamara']"} checked=""{/if}{if="!$fsc->servicios_setup['servicios_mostrar_lentecamara']"} disabled=""{/if}/>
+                              Lente Cámara(s) requerido
+                           </label>
+                        </div> 
+                     </div> 
+                  </div>
+               </div>
+               <div class="col-sm-4">
+                  <div class="panel panel-default">
+                     <div class="panel-heading text-center">Tornillos</div>
+                     <div class="panel-body">
+                        <div class="checkbox">
+                           <label>
+                              <input id="tornillos" onclick="check(this.id)" type="checkbox" name="servicios_mostrar_tornillos" value="TRUE"{if="$fsc->servicios_setup['servicios_mostrar_tornillos']"} checked=""{/if}/>
+                              Mostrar Text Area Tornillos
+                           </label>
+                        </div>
+                        <div class="checkbox">
+                           <label>
+                              <input id="checked_tornillos" type="checkbox" name="servicios_tornillos" value="TRUE"{if="$fsc->servicios_setup['servicios_tornillos']"} checked=""{/if}{if="!$fsc->servicios_setup['servicios_mostrar_tornillos']"} disabled=""{/if}/>
+                              Tornillos requerido
+                           </label>
+                        </div> 
+                     </div> 
+                  </div>
+               </div>
+               <div class="col-sm-4">
+                  <div class="panel panel-default">
+                     <div class="panel-heading text-center">Encendido</div>
+                     <div class="panel-body">
+                        <div class="checkbox">
+                           <label>
+                              <input id="status" onclick="check(this.id)" type="checkbox" name="servicios_mostrar_status" value="TRUE"{if="$fsc->servicios_setup['servicios_mostrar_status']"} checked=""{/if}/>
+                              Mostrar Text Area Encendido
+                           </label>
+                        </div>
+                        <div class="checkbox">
+                           <label>
+                              <input id="checked_status" type="checkbox" name="servicios_status" value="TRUE"{if="$fsc->servicios_setup['servicios_status']"} checked=""{/if}{if="!$fsc->servicios_setup['servicios_mostrar_status']"} disabled=""{/if}/>
+                              Estatus requerido
+                           </label>
+                        </div> 
+                     </div> 
+                  </div>
+               </div>                          
                <div class="col-sm-4">
                   <div class="panel panel-default">
                      <div class="panel-heading text-center">Accesorios</div>
@@ -511,13 +701,13 @@
                     </div>
                     <div class="col-sm-3">
                         <div class="form-group">
-                            <span class="text-uppercase">Defecto Reportado</span>
+                            <span class="text-uppercase">Defecto Reportado por Cliente</span>
                             <input type="text" name="st_material" value="{$fsc->servicios_setup['st_material']}" class="form-control" autocomplete="off"/>
                         </div>
                     </div>                    
                     <div class="col-sm-3">
                         <div class="form-group">
-                            <span class="text-uppercase">Diagnostico del tecnico</span>
+                            <span class="text-uppercase">Diagnostico Rapido</span>
                             <input type="text" name="st_material_estado" value="{$fsc->servicios_setup['st_material_estado']}" class="form-control" autocomplete="off"/>
                         </div>
                     </div>
@@ -543,7 +733,7 @@
                     </div>
                     <div class="col-sm-3">
                         <div class="form-group">
-                            <span class="text-uppercase">IMEI 1</span>
+                            <span class="text-uppercase">ESN / IMEI 1</span>
                             <input type="text" name="st_imei1" value="{$fsc->servicios_setup['st_imei1']}" class="form-control" autocomplete="off"/>
                         </div>
                     </div>
@@ -551,7 +741,7 @@
                 <div class="row">
                     <div class="col-sm-3">
                         <div class="form-group">
-                            <span class="text-uppercase">IMEI 2</span>
+                            <span class="text-uppercase">ESN / IMEI 2</span>
                             <input type="text" name="st_imei2" value="{$fsc->servicios_setup['st_imei2']}" class="form-control" autocomplete="off"/>
                         </div>
                     </div>
@@ -572,11 +762,77 @@
                             <span class="text-uppercase">Tipo de Reparacion</span>
                             <input type="text" name="st_reparacion" value="{$fsc->servicios_setup['st_reparacion']}" class="form-control" autocomplete="off"/>
                         </div>
-                    </div>
+                    </div>                    
+                </div>
+                <div class="row">
                     <div class="col-sm-3">
                         <div class="form-group">
                             <span class="text-uppercase">Especificar Reparacion</span>
                             <input type="text" name="st_esp_reparacion" value="{$fsc->servicios_setup['st_esp_reparacion']}" class="form-control" autocomplete="off"/>
+                        </div>
+                    </div>
+                    <div class="col-sm-3">
+                        <div class="form-group">
+                            <span class="text-uppercase">Operador Telefónico</span>
+                            <input type="text" name="st_operadortel" value="{$fsc->servicios_setup['st_operadortel']}" class="form-control" autocomplete="off"/>
+                        </div>
+                    </div>
+                    <div class="col-sm-3">
+                        <div class="form-group">
+                            <span class="text-uppercase">Display/LCD</span>
+                            <input type="text" name="st_lcd" value="{$fsc->servicios_setup['st_lcd']}" class="form-control" autocomplete="off"/>
+                        </div>
+                    </div>
+                    <div class="col-sm-3">
+                        <div class="form-group">
+                            <span class="text-uppercase">Touch</span>
+                            <input type="text" name="st_tipotouch" value="{$fsc->servicios_setup['st_tipotouch']}" class="form-control" autocomplete="off"/>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-3">
+                        <div class="form-group">
+                            <span class="text-uppercase">Tapa</span>
+                            <input type="text" name="st_tapa" value="{$fsc->servicios_setup['st_tapa']}" class="form-control" autocomplete="off"/>
+                        </div>
+                    </div>
+                    <div class="col-sm-3">
+                        <div class="form-group">
+                            <span class="text-uppercase">Marco</span>
+                            <input type="text" name="st_marco" value="{$fsc->servicios_setup['st_marco']}" class="form-control" autocomplete="off"/>
+                        </div>
+                    </div>
+                    <div class="col-sm-3">
+                        <div class="form-group">
+                            <span class="text-uppercase">Boton(s)</span>
+                            <input type="text" name="st_tipoboton" value="{$fsc->servicios_setup['st_tipoboton']}" class="form-control" autocomplete="off"/>
+                        </div>
+                    </div>
+                    <div class="col-sm-3">
+                        <div class="form-group">
+                            <span class="text-uppercase">Batería</span>
+                            <input type="text" name="st_bateria" value="{$fsc->servicios_setup['st_bateria']}" class="form-control" autocomplete="off"/>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">                    
+                    <div class="col-sm-4">
+                        <div class="form-group">
+                            <span class="text-uppercase">Lente Cámara</span>
+                            <input type="text" name="st_lentecamara" value="{$fsc->servicios_setup['st_lentecamara']}" class="form-control" autocomplete="off"/>
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="form-group">
+                            <span class="text-uppercase">Tornillos</span>
+                            <input type="text" name="st_tornillos" value="{$fsc->servicios_setup['st_tornillos']}" class="form-control" autocomplete="off"/>
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="form-group">
+                            <span class="text-uppercase">Encendido</span>
+                            <input type="text" name="st_status" value="{$fsc->servicios_setup['st_status']}" class="form-control" autocomplete="off"/>
                         </div>
                     </div>
                 </div>
@@ -701,12 +957,12 @@
                  </div>
                  <div class="col-sm-4">
                     <div class="panel panel-default">
-                       <div class="panel-heading text-center">Defecto Reportado</div>
+                       <div class="panel-heading text-center">Defecto Reportado por Usuario</div>
                        <div class="panel-body">
                           <div class="checkbox">
                              <label>
                                 <input type="checkbox" name="servicios_material_linea" value="TRUE"{if="$fsc->servicios_setup['servicios_material_linea']"} checked=""{/if}/>
-                                Añadir Defecto Reportado a la linea
+                                Añadir Defecto Reportado por Usuario a la linea
                              </label>
                           </div>
                        </div> 
@@ -714,12 +970,12 @@
                  </div>                 
                  <div class="col-sm-4">
                     <div class="panel panel-default">
-                       <div class="panel-heading text-center">Diagnostico del tecnico</div>
+                       <div class="panel-heading text-center">Diagnostico Rapido</div>
                        <div class="panel-body">
                           <div class="checkbox">
                              <label>
                                 <input type="checkbox" name="servicios_material_estado_linea" value="TRUE"{if="$fsc->servicios_setup['servicios_material_estado_linea']"} checked=""{/if}/>
-                                Añadir Diagnostico del tecnico a la linea
+                                Añadir Diagnostico Rapido a la linea
                              </label>
                           </div>
                        </div> 
@@ -766,12 +1022,12 @@
                  </div>
                  <div class="col-sm-4">
                     <div class="panel panel-default">
-                       <div class="panel-heading text-center">IMEI 1</div>
+                       <div class="panel-heading text-center">ESN / IMEI 1</div>
                        <div class="panel-body">
                           <div class="checkbox">
                              <label>
                                 <input type="checkbox" name="servicios_imei1_linea" value="TRUE"{if="$fsc->servicios_setup['servicios_imei1_linea']"} checked=""{/if}/>
-                                Añadir IMEI 1 a la linea
+                                Añadir ESN / IMEI 1 a la linea
                              </label>
                           </div>
                        </div> 
@@ -779,12 +1035,12 @@
                  </div>
                  <div class="col-sm-4">
                     <div class="panel panel-default">
-                       <div class="panel-heading text-center">IMEI 2</div>
+                       <div class="panel-heading text-center">ESN / IMEI 2</div>
                        <div class="panel-body">
                           <div class="checkbox">
                              <label>
                                 <input type="checkbox" name="servicios_imei2_linea" value="TRUE"{if="$fsc->servicios_setup['servicios_imei2_linea']"} checked=""{/if}/>
-                                Añadir IMEI 2 a la linea
+                                Añadir ESN / IMEI 2 a la linea
                              </label>
                           </div>
                        </div> 
@@ -837,6 +1093,136 @@
                              <label>
                                 <input type="checkbox" name="servicios_esp_reparacion_linea" value="TRUE"{if="$fsc->servicios_setup['servicios_esp_reparacion_linea']"} checked=""{/if}/>
                                 Añadir Especificar Reparacion a la linea
+                             </label>
+                          </div>
+                       </div> 
+                    </div> 
+                 </div>
+                 <div class="col-sm-4">
+                    <div class="panel panel-default">
+                       <div class="panel-heading text-center">Operador Telefónico</div>
+                       <div class="panel-body">
+                          <div class="checkbox">
+                             <label>
+                                <input type="checkbox" name="servicios_operadortel_linea" value="TRUE"{if="$fsc->servicios_setup['servicios_operadortel_linea']"} checked=""{/if}/>
+                                Añadir Operador Telefónico a la linea
+                             </label>
+                          </div>
+                       </div> 
+                    </div> 
+                 </div>
+                 <div class="col-sm-4">
+                    <div class="panel panel-default">
+                       <div class="panel-heading text-center">Display/LCD</div>
+                       <div class="panel-body">
+                          <div class="checkbox">
+                             <label>
+                                <input type="checkbox" name="servicios_lcd_linea" value="TRUE"{if="$fsc->servicios_setup['servicios_lcd_linea']"} checked=""{/if}/>
+                                Añadir Display/LCD a la linea
+                             </label>
+                          </div>
+                       </div> 
+                    </div> 
+                 </div>
+                 <div class="col-sm-4">
+                    <div class="panel panel-default">
+                       <div class="panel-heading text-center">Touch</div>
+                       <div class="panel-body">
+                          <div class="checkbox">
+                             <label>
+                                <input type="checkbox" name="servicios_tipotouch_linea" value="TRUE"{if="$fsc->servicios_setup['servicios_tipotouch_linea']"} checked=""{/if}/>
+                                Añadir Touch a la linea
+                             </label>
+                          </div>
+                       </div> 
+                    </div> 
+                 </div>
+                 <div class="col-sm-4">
+                    <div class="panel panel-default">
+                       <div class="panel-heading text-center">Tapa</div>
+                       <div class="panel-body">
+                          <div class="checkbox">
+                             <label>
+                                <input type="checkbox" name="servicios_tapa_linea" value="TRUE"{if="$fsc->servicios_setup['servicios_tapa_linea']"} checked=""{/if}/>
+                                Añadir Tapa a la linea
+                             </label>
+                          </div>
+                       </div> 
+                    </div> 
+                 </div>
+                 <div class="col-sm-4">
+                    <div class="panel panel-default">
+                       <div class="panel-heading text-center">Marco/Bisel</div>
+                       <div class="panel-body">
+                          <div class="checkbox">
+                             <label>
+                                <input type="checkbox" name="servicios_marco_linea" value="TRUE"{if="$fsc->servicios_setup['servicios_marco_linea']"} checked=""{/if}/>
+                                Añadir Marco a la linea
+                             </label>
+                          </div>
+                       </div> 
+                    </div> 
+                 </div>
+                 <div class="col-sm-4">
+                    <div class="panel panel-default">
+                       <div class="panel-heading text-center">Boton(es)</div>
+                       <div class="panel-body">
+                          <div class="checkbox">
+                             <label>
+                                <input type="checkbox" name="servicios_tipoboton_linea" value="TRUE"{if="$fsc->servicios_setup['servicios_tipoboton_linea']"} checked=""{/if}/>
+                                Añadir Boton(es) a la linea
+                             </label>
+                          </div>
+                       </div> 
+                    </div> 
+                 </div>
+                 <div class="col-sm-4">
+                    <div class="panel panel-default">
+                       <div class="panel-heading text-center">Batería</div>
+                       <div class="panel-body">
+                          <div class="checkbox">
+                             <label>
+                                <input type="checkbox" name="servicios_bateria_linea" value="TRUE"{if="$fsc->servicios_setup['servicios_bateria_linea']"} checked=""{/if}/>
+                                Añadir Batería a la linea
+                             </label>
+                          </div>
+                       </div> 
+                    </div> 
+                 </div>
+                 <div class="col-sm-4">
+                    <div class="panel panel-default">
+                       <div class="panel-heading text-center">Lente Cámara</div>
+                       <div class="panel-body">
+                          <div class="checkbox">
+                             <label>
+                                <input type="checkbox" name="servicios_lentecamara_linea" value="TRUE"{if="$fsc->servicios_setup['servicios_lentecamara_linea']"} checked=""{/if}/>
+                                Añadir Lente Cámara a la linea
+                             </label>
+                          </div>
+                       </div> 
+                    </div> 
+                 </div>
+                 <div class="col-sm-4">
+                    <div class="panel panel-default">
+                       <div class="panel-heading text-center">Tornillos</div>
+                       <div class="panel-body">
+                          <div class="checkbox">
+                             <label>
+                                <input type="checkbox" name="servicios_tornillos_linea" value="TRUE"{if="$fsc->servicios_setup['servicios_tornillos_linea']"} checked=""{/if}/>
+                                Añadir Tornillos a la linea
+                             </label>
+                          </div>
+                       </div> 
+                    </div> 
+                 </div>
+                 <div class="col-sm-4">
+                    <div class="panel panel-default">
+                       <div class="panel-heading text-center">Encendido</div>
+                       <div class="panel-body">
+                          <div class="checkbox">
+                             <label>
+                                <input type="checkbox" name="servicios_status_linea" value="TRUE"{if="$fsc->servicios_setup['servicios_status_linea']"} checked=""{/if}/>
+                                Añadir Encendido a la linea
                              </label>
                           </div>
                        </div> 

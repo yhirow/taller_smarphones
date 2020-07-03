@@ -155,7 +155,7 @@
             <p align="justify"><font size="1">{$fsc->condiciones()}</font></p>
         </div>
         <p>...............................................................................................................................................................................................</p>
-        <div class="col-xs-6">
+        <div class="col-xs-12">
             <div class="col-xs-12">
                 <h4><strong>{$fsc->setup['st_servicio']}: {$fsc->servicio->codigo}</strong></h4>
                 <h5>
@@ -178,52 +178,52 @@
                 {if="$fsc->cliente"}{$fsc->cliente->telefono2}{/if}
             </div>
             {if="$fsc->setup['servicios_mostrar_material']"}
-            <div class="col-xs-12">
+            <div class="col-xs-6">
                 <strong>{$fsc->setup['st_material']}</strong><br/>{$fsc->servicio->material}
             </div>
             {/if}           
             {if="$fsc->setup['servicios_mostrar_material_estado']"}
-            <div class="col-xs-12">
+            <div class="col-xs-6">
                 <strong>{$fsc->setup['st_material_estado']}</strong><br/>{$fsc->servicio->material_estado}
             </div>
             {/if}
              {if="$fsc->setup['servicios_mostrar_tipomarca']"}
-            <div class="col-xs-12">
+            <div class="col-xs-4">
                 <strong>{$fsc->setup['st_tipomarca']}</strong><br/>{$fsc->servicio->tipomarca}
             </div>
             {/if}
              {if="$fsc->setup['servicios_mostrar_nummodelo']"}
-            <div class="col-xs-12">
+            <div class="col-xs-4">
                 <strong>{$fsc->setup['st_nummodelo']}</strong><br/>{$fsc->servicio->nummodelo}
             </div>
             {/if}
              {if="$fsc->setup['servicios_mostrar_tipocolor']"}
-            <div class="col-xs-12">
+            <div class="col-xs-4">
                 <strong>{$fsc->setup['st_tipocolor']}</strong><br/>{$fsc->servicio->tipocolor}
             </div>
             {/if}
              {if="$fsc->setup['servicios_mostrar_imei1']"}
-            <div class="col-xs-12">
+            <div class="col-xs-4">
                 <strong>{$fsc->setup['st_imei1']}</strong><br/>{$fsc->servicio->imei1}
             </div>
             {/if}
              {if="$fsc->setup['servicios_mostrar_imei2']"}
-            <div class="col-xs-12">
+            <div class="col-xs-4">
                 <strong>{$fsc->setup['st_imei2']}</strong><br/>{$fsc->servicio->imei2}
             </div>
             {/if}
              {if="$fsc->setup['servicios_mostrar_equipo']"}
-            <div class="col-xs-12">
+            <div class="col-xs-4">
                 <strong>{$fsc->setup['st_equipo']}</strong><br/>{$fsc->servicio->equipo}
             </div>
             {/if}
              {if="$fsc->setup['servicios_mostrar_condequipo']"}
-            <div class="col-xs-12">
+            <div class="col-xs-6">
                 <strong>{$fsc->setup['st_condequipo']}</strong><br/>{$fsc->servicio->condequipo}
             </div>
             {/if}
              {if="$fsc->setup['servicios_mostrar_reparacion']"}
-            <div class="col-xs-12">
+            <div class="col-xs-6">
                 <strong>{$fsc->setup['st_reparacion']}</strong><br/>{$fsc->servicio->reparacion}
             </div>
             {/if}
@@ -232,8 +232,63 @@
                 <strong>{$fsc->setup['st_esp_reparacion']}</strong><br/>{$fsc->servicio->esp_reparacion}
             </div>
             {/if}
+            
+            &nbsp;
+    <div class="page-header">
+     <h4>ESTADO FISICO DEL EQUIPO <small> Entregado por Cliente</small></h4>
+    </div>            
+             {if="$fsc->setup['servicios_mostrar_operadortel']"}
+            <div class="col-xs-4">
+                <strong>{$fsc->setup['st_operadortel']}</strong><br/>{$fsc->servicio->operadortel}
+            </div>
+            {/if}
+             {if="$fsc->setup['servicios_mostrar_lcd']"}
+            <div class="col-xs-4">
+                <strong>{$fsc->setup['st_lcd']}</strong><br/>{$fsc->servicio->lcd}
+            </div>
+            {/if}
+             {if="$fsc->setup['servicios_mostrar_tipotouch']"}
+            <div class="col-xs-4">
+                <strong>{$fsc->setup['st_tipotouch']}</strong><br/>{$fsc->servicio->tipotouch}
+            </div>
+            {/if}
+             {if="$fsc->setup['servicios_mostrar_tapa']"}
+            <div class="col-xs-4">
+                <strong>{$fsc->setup['st_tapa']}</strong><br/>{$fsc->servicio->tapa}
+            </div>
+            {/if}
+             {if="$fsc->setup['servicios_mostrar_marco']"}
+            <div class="col-xs-4">
+                <strong>{$fsc->setup['st_marco']}</strong><br/>{$fsc->servicio->marco}
+            </div>
+            {/if}
+             {if="$fsc->setup['servicios_mostrar_tipoboton']"}
+            <div class="col-xs-4">
+                <strong>{$fsc->setup['st_tipoboton']}</strong><br/>{$fsc->servicio->tipoboton}
+            </div>
+            {/if}
+             {if="$fsc->setup['servicios_mostrar_bateria']"}
+            <div class="col-xs-4">
+                <strong>{$fsc->setup['st_bateria']}</strong><br/>{$fsc->servicio->bateria}
+            </div>
+            {/if}
+             {if="$fsc->setup['servicios_mostrar_lentecamara']"}
+            <div class="col-xs-4">
+                <strong>{$fsc->setup['st_lentecamara']}</strong><br/>{$fsc->servicio->lentecamara}
+            </div>
+            {/if}
+             {if="$fsc->setup['servicios_mostrar_tornillos']"}
+            <div class="col-xs-4">
+                <strong>{$fsc->setup['st_tornillos']}</strong><br/>{$fsc->servicio->tornillos}
+            </div>
+            {/if}
+             {if="$fsc->setup['servicios_mostrar_status']"}
+            <div class="col-xs-4">
+                <strong>{$fsc->setup['st_status']}</strong><br/>{$fsc->servicio->status}
+            </div>
+            {/if}
             {if="$fsc->setup['servicios_mostrar_accesorios']"}
-            <div class="col-xs-12">
+            <div class="col-xs-6">
                 <strong>{$fsc->setup['st_accesorios']}</strong><br/>{$fsc->servicio->accesorios}
             </div>
             {/if}
@@ -241,11 +296,11 @@
                 <strong>{$fsc->setup['st_descripcion']}</strong><br/>{$fsc->servicio->descripcion}
             </div>
             {if="$fsc->setup['servicios_mostrar_solucion']"}
-            <div class="col-xs-12">
+            <div class="col-xs-6">
                 <strong>{$fsc->setup['st_solucion']}:</strong><br/>{$fsc->servicio->solucion}
             </div>
             {/if}
-            <div class="col-xs-12">
+            <div class="col-xs-6">
                 <strong>Observaciones:</strong><br/>{$fsc->servicio->observaciones}
             </div>
         </div>

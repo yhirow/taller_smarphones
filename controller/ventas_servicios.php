@@ -156,6 +156,26 @@ class ventas_servicios extends fbase_controller
             'servicios_mostrar_reparacion' => 0,
             'servicios_esp_reparacion' => 0,
             'servicios_mostrar_esp_reparacion' => 0,
+            'servicios_operadortel' => 0,
+            'servicios_mostrar_operadortel' => 0,
+            'servicios_lcd' => 0,
+            'servicios_mostrar_lcd' => 0,
+            'servicios_tipotouch' => 0,
+            'servicios_mostrar_tipotouch' => 0,
+            'servicios_tapa' => 0,
+            'servicios_mostrar_tapa' => 0,
+            'servicios_marco' => 0,
+            'servicios_mostrar_marco' => 0,
+            'servicios_tipoboton' => 0,
+            'servicios_mostrar_tipoboton' => 0,
+            'servicios_bateria' => 0,
+            'servicios_mostrar_bateria' => 0,
+            'servicios_lentecamara' => 0,
+            'servicios_mostrar_lentecamara' => 0,
+            'servicios_tornillos' => 0,
+            'servicios_mostrar_tornillos' => 0,
+            'servicios_status' => 0,
+            'servicios_mostrar_status' => 0,
             'servicios_accesorios' => 0,
             'servicios_mostrar_accesorios' => 0,
             'servicios_descripcion' => 0,
@@ -178,17 +198,27 @@ class ventas_servicios extends fbase_controller
             array(
             'st_servicio' => "Servicio",
             'st_servicios' => "Servicios",
-            'st_material' => "Defecto Reportado",
-            'st_material_estado' => "Diagnostico del tecnico",
+            'st_material' => "Defecto Reportado por Usuario",
+            'st_material_estado' => "Diagnostico Rapido",
             'st_tipomarca' => "Marca",
             'st_nummodelo' => "Modelo",
             'st_tipocolor' => "Color",
-            'st_imei1' => "IMEI 1",
-            'st_imei2' => "IMEI 2",
+            'st_imei1' => "ESN / IMEI 1",
+            'st_imei2' => "ESN / IMEI 2",
             'st_equipo' => "Tipo de Equipo",
             'st_condequipo' => "Condicion de Equipo",
             'st_reparacion' => "Tipo de Reparacion",
             'st_esp_reparacion' => "Especificacion de Reparacion",
+            'st_operadortel' => "Operador Telefonico",
+            'st_lcd' => "Display / LCD",
+            'st_tipotouch' => "Touch",
+            'st_tapa' => "Tapa",
+            'st_marco' => "Marco/Bisel",
+            'st_tipoboton' => "Botones",
+            'st_bateria' => "Bateria",
+            'st_lentecamara' => "Lente Camara",
+            'st_tornillos' => "Tornillos",
+            'st_status' => "Status",
             'st_accesorios' => "Accesorios que entrega",
             'st_descripcion' => "Descripción de la averia",
             'st_fechainicio' => "Fecha de inicio",
@@ -346,6 +376,16 @@ class ventas_servicios extends fbase_controller
                     . "OR condequipo LIKE '%" . $query . "%'"
                     . "OR reparacion LIKE '%" . $query . "%'"
                     . "OR esp_reparacion LIKE '%" . $query . "%'"
+                    . "OR operadortel LIKE '%" . $query . "%'"
+                    . "OR lcd LIKE '%" . $query . "%'"
+                    . "OR tipotouch LIKE '%" . $query . "%'"
+                    . "OR tapa LIKE '%" . $query . "%'"
+                    . "OR marco LIKE '%" . $query . "%'"
+                    . "OR tipoboton LIKE '%" . $query . "%'"
+                    . "OR bateria LIKE '%" . $query . "%'"
+                    . "OR lentecamara LIKE '%" . $query . "%'"
+                    . "OR tornillos LIKE '%" . $query . "%'"
+                    . "OR status LIKE '%" . $query . "%'"
                     . "OR accesorios LIKE '%" . $query . "%'"
                     . "OR descripcion LIKE '%" . $query . "%'"
                     . "OR solucion LIKE '%" . $query . "%'";
@@ -369,6 +409,16 @@ class ventas_servicios extends fbase_controller
                     . "OR lower(condequipo) LIKE '%" . $query . "%'"
                     . "OR lower(reparacion) LIKE '%" . $query . "%'"
                     . "OR lower(esp_reparacion) LIKE '%" . $query . "%'"
+                    . "OR lower(operadortel) LIKE '%" . $query . "%'"
+                    . "OR lower(lcd) LIKE '%" . $query . "%'"
+                    . "OR lower(tipotouch) LIKE '%" . $query . "%'"
+                    . "OR lower(tapa) LIKE '%" . $query . "%'"
+                    . "OR lower(marco) LIKE '%" . $query . "%'"
+                    . "OR lower(tipoboton) LIKE '%" . $query . "%'"
+                    . "OR lower(bateria) LIKE '%" . $query . "%'"
+                    . "OR lower(lentecamara) LIKE '%" . $query . "%'"
+                    . "OR lower(tornillos) LIKE '%" . $query . "%'"
+                    . "OR lower(status) LIKE '%" . $query . "%'"
                     . "OR lower(accesorios) LIKE '%" . $query . "%'"
                     . "OR lower(descripcion) LIKE '%" . $query . "%'"
                     . "OR lower(solucion) LIKE '%" . $query . "%'";

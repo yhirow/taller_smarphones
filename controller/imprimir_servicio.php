@@ -101,13 +101,13 @@ class imprimir_servicio extends fs_controller
             . " caso de disconformidad con el técnico.",
             'st_servicio' => "Servicio",
             'st_servicios' => "Servicios",
-            'st_material' => "Defecto Reportado",
-            'st_material_estado' => "Diagnostico del tecnico",
+            'st_material' => "Defecto Reportado por Usuario",
+            'st_material_estado' => "Diagnostico Rapido",
             'st_tipomarca' => "Marca",
             'st_nummodelo' => "Modelo",
             'st_tipocolor' => "Color",
-            'st_imei1' => "IMEI 1",
-            'st_imei2' => "IMEI 2",
+            'st_imei1' => "ESN / IMEI 1",
+            'st_imei2' => "ESN / IMEI 2",
             'st_equipo' => "Tipo de Equipo",
             'st_condequipo' => "Condicion de Equipo",
             'st_reparacion' => "Tipo de Reparacion",
@@ -256,9 +256,9 @@ class imprimir_servicio extends fs_controller
 
                 if ($linea_actual == count($lineas)) {
                     if ($this->servicio->observaciones != '') {
-                        $pdf_doc->pdf->ezText("\n" . $this->servicio->observaciones, 9);
+                        $pdf_doc->pdf->ezText("\n" . $this->servicio->observaciones, 8);
                     }
-                    $pdf_doc->pdf->ezText("\n" . $this->setup['servicios_condiciones'], 9);
+                    $pdf_doc->pdf->ezText("\n" . $this->setup['servicios_condiciones'], 8);
                 }
 
                 $pdf_doc->set_y(80);
@@ -389,12 +389,12 @@ class imprimir_servicio extends fs_controller
                     'dato2' => array('justification' => 'left')
                 ),
                 'showLines' => 0,
-                'width' => 520,
+                'width' => 420,
                 'shaded' => 0
             )
         );
 
-        $pdf_doc->pdf->ezText("\n", 10);
+        $pdf_doc->pdf->ezText("\n", 1);
         $pdf_doc->pdf->ezText("\n<b>" . $this->setup['st_servicio'] . "</b>", 14);
 
         /* Esta es la tabla de los datos del servicio y trabajos a realizar */
@@ -457,9 +457,9 @@ class imprimir_servicio extends fs_controller
         if ($this->setup['servicios_mostrar_fechainicio'] AND $this->setup['servicios_mostrar_fechafin']) {
             $pdf_doc->add_table_row(
                 array(
-                    'campo1' => "<b>Fecha prevista de inicio:</b>",
+                    'campo1' => "<b>Fecha de Ingreso:</b>",
                     'dato1' => $pdf_doc->fix_html($this->servicio->fechainicio),
-                    'campo2' => "<b>Fecha prevista de finalización:</b>",
+                    'campo2' => "<b>Fecha prevista de entrega:</b>",
                     'dato2' => $pdf_doc->fix_html($this->servicio->fechafin)
                 )
             );
